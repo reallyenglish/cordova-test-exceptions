@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+  id="org.reallyenglish.testExceptions" version="0.1.0">
+  <name>TestExceptions</name>
+  <description>Reallyenglish TestExceptions</description>
+  <license>Apache 2.0</license>
+  <keywords>reallyenglish,test-exceptions</keywords>
+  <engines>
+    <engine name="cordova" version=">=3.0.0" />
+  </engines>
+  <js-module src="www/TestExceptions.js" name="TestExceptions">
+    <clobbers target="plugins.testExceptions" />
+  </js-module>
+
+  <platform name="ios">
+    <config-file target="config.xml" parent="/*">
+      <feature name="TestExceptions">
+        <param name="ios-package" value="CDVTestExceptions"/>
+      </feature>
+    </config-file>
+
+    <header-file src="src/ios/CDVTestExceptions.h" />
+    <source-file src="src/ios/CDVTestExceptions.m" />
+  </platform> 
+</plugin>
